@@ -7,10 +7,15 @@
 class MQTT {
   private:
     PubSubClient client;
+    WiFiClient myWifiClient;
+    static void callback(char* topic, byte* payload, unsigned int length);
 
   public:
-    void init(WiFiClient& wifiClient);
-    void setBroker(String broker);
+    MQTT() : client(myWifiClient) {}  
+
+    void setBroker(String broker, int port);
+    void setMQTTCallback();
+    void reconnect(); // change the client ID to something unique
 };
 
 #endif
