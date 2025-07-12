@@ -23,12 +23,12 @@ void MQTT::reconnect() {
     while (!client.connected()) {
       Serial.print("Attempting MQTT connection...");
 
-      if (client.connect("Client_test")) {
+      if (client.connect(MQTT_CLIENT_ID)) {
         Serial.print(" Connected to: ");
         Serial.print("test.mosquitto.org");
-        client.subscribe("/RXhanzeelVilla");
+        client.subscribe(RX_TOPIC);
         Serial.print(" Subscribed to: ");
-        Serial.println("/RXhanzeelVilla");
+        Serial.println(RX_TOPIC);
       } 
       else {
         Serial.print(" failed, rc= ");
