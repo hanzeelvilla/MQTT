@@ -2,8 +2,8 @@
 #define MQTT_H 
 
 #include "PubSubClient.h"
-#include <WiFiClient.h>
 
+/*
 class MQTT {
   private:
     PubSubClient client;
@@ -18,4 +18,5 @@ class MQTT {
     void reconnect(); // change the client ID to something unique
 };
 
+*/
 #endif

@@ -1,8 +1,8 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-#define SSID1 "SSID1"
-#define PSWD1 "PSWD1"
+#define WIFI_SSID "SSID"
+#define WIFI_PSWD "PSWD"
 
 #define MQTT_CLIENT_ID "YOUR_CLIENT_ID"
 #define MQTT_BROKER "test.mosquitto.org"
