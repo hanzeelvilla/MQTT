@@ -1,6 +1,6 @@
 #include "HardwareSerial.h"
-#ifndef WIFI_H
-#define WIFI_H
+#ifndef WIFI_CONNECT_H
+#define WIFI_CONNECT_H  
 
 #include <WiFi.h>
 #include "config.h"
