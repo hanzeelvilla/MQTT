@@ -12,6 +12,4 @@
 // #define TX_TOPIC1 "YOUR_TX_TOPIC1"
 // #define RX_TOPIC1 "YOUR_RX_TOPIC1"
 
-#define CONNECTION_TIME_OUT 10000
-
 #endif
