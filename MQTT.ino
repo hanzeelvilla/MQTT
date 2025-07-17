@@ -1,9 +1,7 @@
 #include "MQTT.h"
 #include "config.h"
-#include "wifi.h"
-
-//WiFiMulti wifiMulti;
-//WiFiClient espClient; 
+#include "wifi_connect.h"
+ 
 //MQTT mqttClient;
 
 void setup() {

@@ -1,6 +1,5 @@
 #include "MQTT.h"
 
-/*
 void MQTT::setBroker(String broker, int port) {
   client.setServer(broker.c_str(), port);
 }
@@ -42,4 +41,3 @@ void MQTT::reconnect() {
 
   client.loop();
 }
-*/
