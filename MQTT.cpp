@@ -2,6 +2,7 @@
 
 void MQTT::setBroker(String broker, int port) {
   client.setServer(broker.c_str(), port);
+  Serial.printf("MQTT Broker set: %s %d\n", broker.c_str(), port);
 }
 
 void MQTT::callback(char* topic, byte* payload, unsigned int length) {
