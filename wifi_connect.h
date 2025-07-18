@@ -5,15 +5,15 @@
 #include "config.h"
 
 bool isWifiConnected(){
-  return WiFi.status() != WL_CONNECTED;
+  return WiFi.status() == WL_CONNECTED;
 }
 
-void setupWifi() {
+void reconnectWifi() {
   WiFi.begin(WIFI_SSID, WIFI_PSWD);
   Serial.print("Connecting to ");
   Serial.println(WIFI_SSID);
 
-  while(isWifiConnected()) {
+  while(!isWifiConnected()) {
     Serial.print(".");
     delay(500);
   }
