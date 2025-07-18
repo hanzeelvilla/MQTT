@@ -9,6 +9,7 @@ void setup() {
   setupWifi();
 
   mqttClient.setBroker(MQTT_BROKER, MQTT_PORT);
+  mqttClient.setMQTTCallback();
 }
 
 void loop() {

@@ -31,3 +31,6 @@ git clone https://github.com/hanzeelvilla/MQTT.git
 5. Open `config.h` and enter your WiFi and MQTT credentials.
 > [!NOTE]
 > The default MQTT port is 1883
+
+## To Do list
+[ ] Add an optional parameter to allow using a custom MQTT callback function

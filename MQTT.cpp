@@ -5,26 +5,28 @@ void MQTT::setBroker(String broker, int port) {
   Serial.printf("MQTT Broker set: %s %d\n", broker.c_str(), port);
 }
 
+void MQTT::setMQTTCallback() {
+  client.setCallback(callback);
+  Serial.println("Callback set");
+}
+
 void MQTT::callback(char* topic, byte* payload, unsigned int length) {
   Serial.print("Message arrived in topic: ");
   Serial.print(topic);
 
-  for (int i = 0; i < length; i++) {
+  for(int i = 0; i < length; i++) {
     Serial.print((char)payload[i]);
   }
+  
   Serial.println();
 }
 
-void MQTT::setMQTTCallback() {
-  client.setCallback(callback);
-}
-
 void MQTT::reconnect() {
-  if (!client.connected()) {
-    while (!client.connected()) {
+  if(!client.connected()) {
+    while(!client.connected()) {
       Serial.print("Attempting MQTT connection...");
 
-      if (client.connect(MQTT_CLIENT_ID)) {
+      if(client.connect(MQTT_CLIENT_ID)) {
         Serial.print(" Connected to: ");
         Serial.print("test.mosquitto.org");
         client.subscribe(RX_TOPIC);
@@ -37,7 +39,7 @@ void MQTT::reconnect() {
         Serial.println(" try again in 5 seconds");
         delay(5000);
       }
-    }
+    } 
   }
 
   client.loop();
